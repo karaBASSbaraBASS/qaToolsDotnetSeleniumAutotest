@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestHelper.cs" />
     <Compile Include="ParabankWebAppShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
