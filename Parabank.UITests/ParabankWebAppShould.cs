@@ -13,7 +13,14 @@ namespace Parabank.UITests
         {
             using (IWebDriver driver = new ChromeDriver()) 
             {
-                driver.Navigate().GoToUrl("https://parabank.parasoft.com/parabank/about.htm");
+                const string homeUrl = "https://parabank.parasoft.com/parabank/about.htm";
+
+                driver.Navigate().GoToUrl(homeUrl);
+
+                TestHelper.Pause();
+
+                Assert.Equal("ParaBank | About Us", driver.Title);
+                Assert.Equal(homeUrl, driver.Url);
             }
         }
     }
